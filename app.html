@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP NAME: A Coding Challenge</title>
+    <title>Going to the Movies: A Coding Challenge</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -106,9 +106,7 @@
                         become his friends' protector by taking on the mafia.</p>
                 </div>
                 <div class="card-footer text-end">
-                    <button class="btn btn-primary" 
-                        data-bs-toggle="modal" 
-                        data-bs-target="#movieModal"
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#movieModal"
                         onclick="showMovieDetails(this)">
                         More Info
                     </button>
@@ -121,11 +119,12 @@
     <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
         <div class="modal-dialog d-flex align-items-center justify-content-center" style="width: 900px;">
             <div class="modal-content" style="width: 900px;">
-                <div class="modal-header d-flex justify-content-center align-items-center fw-bold bg-success text-light">
+                <div
+                    class="modal-header d-flex justify-content-center align-items-center fw-bold bg-success text-light">
                 </div>
                 <div class="modal-body d-flex">
                     <div style="width: 475px;" id="col1">
-                        <img src="" style="max-width: 350px;" id="movie-poster-img"/>
+                        <img src="" style="max-width: 350px;" id="movie-poster-img" />
                     </div>
                     <div id="col2" style="width: 475px;">
                         <div class="d-flex w-100" id="row1"></div>
@@ -137,7 +136,7 @@
                         <div class="d-flex w-100" id="row7"></div>
                         <div class="d-flex w-100" id="row8"></div>
                     </div>
-                    
+
                 </div>
                 <div class="modal-footer bg-dark">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Back to Movies</button>
