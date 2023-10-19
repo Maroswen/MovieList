@@ -17,7 +17,12 @@ async function getMovies() { //this function aims to grab the data from the API
         return data;
 
     } catch(error) {
-        console.error(error);
+        Swal.fire({
+            backdrop: false,
+            title: 'Oops!',
+            text: 'Something went wrong reaching the TMDB API.',
+            icon: 'error'
+        });
     }
 }
 
@@ -38,7 +43,12 @@ async function getMovie(id) { //this function aims to grab the data from the API
         return data;
 
     } catch(error) {
-        console.error(error);
+        Swal.fire({
+            backdrop: false,
+            title: 'Oops!',
+            text: 'Something went wrong reaching the TMDB API.',
+            icon: 'error'
+        });
     }
 }
 

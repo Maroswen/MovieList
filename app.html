@@ -24,7 +24,7 @@
 
 
 
-<body>
+<body onload="displayMovies()">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
@@ -67,7 +67,6 @@
 
     <main class="container-xl py-3">
         <h1 class="text-center mt-3 display-3">Popular Movies</h1>
-        <button class="btn btn-primary mb-5" onclick="displayMovies()">Get Movies</button>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 justify-content-around"
             id="movie-list">
