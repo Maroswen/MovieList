@@ -29,7 +29,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
                 <img src="/img/mainlogo.png" height="30" />
-                APP NAME
+                Going to the Movies
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -65,13 +65,14 @@
         </div>
     </nav>
 
-    <main class="container py-3">
-        <h1>APP UI GOES HERE</h1>
+    <main class="container-xl py-3">
+        <h1 class="text-center mt-3 display-3">Popular Movies</h1>
+        <button class="btn btn-primary mb-5" onclick="displayMovies()">Get Movies</button>
 
-        <input class="form-control my-3" placeholder="Enter a message" type="text" style="width: 12rem" name="message"
-            id="message" />
-
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 justify-content-around"
+            id="movie-list">
+            <!-- Movie cards go here -->
+        </div>
     </main>
 
 
@@ -92,6 +93,60 @@
         </div>
     </footer>
 
+    <template id="movie-card-template">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://image.tmdb.org/t/p/w500/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg" class="card-img-top"
+                    alt="Movie Poster">
+                <div class="card-body">
+                    <h5>The Equalizer 3</h5>
+                    <p class="card-text">Robert McCall finds himself at home in Southern Italy but he discovers
+                        his friends are under the control of local crime bosses.
+                        As events turn deadly, McCall knows what he has to do:
+                        become his friends' protector by taking on the mafia.</p>
+                </div>
+                <div class="card-footer text-end">
+                    <button class="btn btn-primary" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#movieModal"
+                        onclick="showMovieDetails(this)">
+                        More Info
+                    </button>
+                </div>
+            </div>
+    </template>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
+        <div class="modal-dialog d-flex align-items-center justify-content-center" style="width: 900px;">
+            <div class="modal-content" style="width: 900px;">
+                <div class="modal-header d-flex justify-content-center align-items-center fw-bold bg-secondary text-light">
+                </div>
+                <div class="modal-body d-flex">
+                    <div style="width: 475px;" id="col1">
+                        <img src="" style="max-width: 350px;" id="movie-poster-img"/>
+                    </div>
+                    <div id="col2" style="width: 475px;">
+                        <div class="d-flex w-100" id="row1"></div>
+                        <div class="d-flex w-100" id="row2"></div>
+                        <div class="d-flex w-100" id="row3"></div>
+                        <div class="d-flex w-100" id="row4"></div>
+                        <div class="d-flex w-100" id="row5"></div>
+                        <div class="d-flex w-100" id="row6"></div>
+                        <div class="d-flex w-100" id="row7"></div>
+                        <div class="d-flex w-100" id="row8"></div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer bg-secondary">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Back to Movies</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <!-- Bootstrap JS -->
@@ -103,14 +158,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="/js/site.js"></script>
-
-    <script>
-        // get the button on the page and assign it to a variable
-        let button = document.getElementById('btnSubmit');
-
-        // tell the button to run our display message function when clicked
-        button.addEventListener('click', displayMessage);
-    </script>
 
 </body>
 
