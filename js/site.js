@@ -57,6 +57,8 @@ async function displayMovies() {
     let data = await getMovies();
 
     const movieListDiv = document.getElementById('movie-list');
+    movieListDiv.innerHTML = '';
+
     const moviePosterTemplate = document.getElementById('movie-card-template');
 
     let movies = data.results;
